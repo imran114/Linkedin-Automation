@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 public class LinkedInAutomation {
     public static void main(String[] args) throws InterruptedException {
-        WebElement email = null;
+        WebElement usernameORemail = null;
         WebElement password = null;
         // Set the path to chromedriver executable
         System.setProperty("webdriver.chrome.driver", "D:/Gitlab practice/test-project/chromedriver.exe");
@@ -31,8 +31,8 @@ public class LinkedInAutomation {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
         // Login to LinkedIn (replace 'username' and 'password' with actual credentials)
-        email = driver.findElement(By.xpath("//div[@class='flex flex-col']//input[contains(@id, 'email-or-phone')] | //input[contains(@autocomplete, 'username')]"));
-        email.sendKeys("email"); // Enter the email
+        usernameORemail = driver.findElement(By.xpath("//div[@class='flex flex-col']//input[contains(@id, 'email-or-phone')] | //input[contains(@autocomplete, 'username')]"));
+        usernameORemail.sendKeys("username or email"); // Enter the username or email
         password = driver.findElement(By.xpath("//div[@class='flex flex-col']//input[contains(@autocomplete, 'new-password')] | //input[contains(@autocomplete, 'current-password')]"));
         password.sendKeys("password"); // Enter the password
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
