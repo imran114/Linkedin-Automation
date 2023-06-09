@@ -45,7 +45,7 @@ public class LinkedInAutomation {
         // Search for a company
         Thread.sleep(3000); // Wait for 3 seconds
         WebElement searchInput = driver.findElement(By.cssSelector("input[role='combobox']"));
-        searchInput.sendKeys("Techlogix"); // Enter the company name
+        searchInput.sendKeys("Company Name"); // Enter the company name
         searchInput.sendKeys(Keys.RETURN); // Press Enter
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         System.out.println("Company name entered");
