@@ -15,7 +15,7 @@ public class LinkedInAutomation {
     public static void main(String[] args) throws InterruptedException {
         WebElement usernameORemail = null;
         WebElement password = null;
-        // Set the path to chromedriver executable
+        // Set the path to chromedriver executable //
         System.setProperty("webdriver.chrome.driver", "D:/Gitlab practice/test-project/chromedriver.exe");
         WebDriver driver = new ChromeDriver(); // Create a new ChromeDriver instance
         // In case you are using firefox browser, use below commented code and uncomment it
