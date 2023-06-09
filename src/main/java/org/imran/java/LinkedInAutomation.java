@@ -30,9 +30,9 @@ public class LinkedInAutomation {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         // Login to LinkedIn (replace 'username' and 'password' with actual credentials) // //*[@id="session_key"]
             email = driver.findElement(By.xpath("//div[@class='flex flex-col']//input[contains(@id, 'email-or-phone')] | //input[contains(@autocomplete, 'username')]"));
-        email.sendKeys("imranullah114@gmail.com");
+        email.sendKeys("email");
         password = driver.findElement(By.xpath("//div[@class='flex flex-col']//input[contains(@autocomplete, 'new-password')] | //input[contains(@autocomplete, 'current-password')]")); //*[@id="session_password"]
-        password.sendKeys("Imran@ust1");
+        password.sendKeys("password");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         WebElement signIn = driver.findElement(By.cssSelector("button[type='submit']")); //   //button[starts-with(@class, 'btn-md btn-primary flex-shrink-0')]
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

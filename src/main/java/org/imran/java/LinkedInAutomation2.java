@@ -11,7 +11,7 @@ public class LinkedInAutomation2 {
     public static void main(String[] args) throws InterruptedException {
         WebElement email = null;
         WebElement password = null;
-        // Set the path to chromedriver executable
+        // Set the path to chromedriver executable, In my case it's the below one
         System.setProperty("webdriver.chrome.driver", "D:/Gitlab practice/test-project/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -23,9 +23,9 @@ public class LinkedInAutomation2 {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         // Login to LinkedIn (replace 'username' and 'password' with actual credentials)
         email = driver.findElement(By.xpath("//div[@class='flex flex-col']//input[contains(@id, 'email-or-phone')] | //input[contains(@autocomplete, 'username')]"));
-        email.sendKeys("imranullah114@gmail.com");
+        email.sendKeys("email");
         password = driver.findElement(By.xpath("//div[@class='flex flex-col']//input[contains(@autocomplete, 'new-password')] | //input[contains(@autocomplete, 'current-password')]"));
-        password.sendKeys("Imran@ust1");
+        password.sendKeys("password");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         WebElement signIn = driver.findElement(By.cssSelector("button[type='submit']"));
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
